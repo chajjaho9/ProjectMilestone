@@ -8,13 +8,11 @@
 </head>
 <body>
 
-/* header */
     <header>
         <h1 id="site-title">HTTP Self-Assessment Quiz</h1>
         <p>Test your understanding of Web Evolution and HTTP Architecture</p>
     </header>
 
-/* main navigation */
     <nav id="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="topic1.html" class="nav-link">Foundational Architecture</a>
@@ -26,19 +24,16 @@
     </nav>
 
     <div class="container">
-/* timer */
+
         <div class="quiz-timer-bar">
             <span>10 Questions | Passing Score: 70% (7/10)</span>
             <span>Time Remaining: <span id="timer-display">10:00</span></span>
         </div>
 
-/* results summary box */
         <div id="quiz-results"></div>
 
-/* quiz form */
         <form id="http-quiz-form">
 
-/* questions */
             <div class="question-card" id="q1-card">
                 <p class="question-title">1. (Fill in the blank) What does the acronym <strong>HTTP</strong> stand for?</p>
                 <input type="text" id="q1" name="q1" class="quiz-text-input" placeholder="Enter full expansion...">
@@ -123,7 +118,6 @@
                 <div class="question-feedback" id="q10-feedback"></div>
             </div>
 
-/* action buttons */
             <div class="quiz-actions">
                 <button type="button" id="submit-quiz-btn" class="btn btn-primary">Submit Quiz</button>
                 <button type="button" id="reset-quiz-btn" class="btn btn-secondary">Reset / Retake Quiz</button>
@@ -132,12 +126,10 @@
         </form>
     </div>
 
-/* footer */
     <footer>
         <p>IT 3203 Class Project | <a href="https://ksuweb.github.io/IT3203/" target="_blank" style="color: #64b5f6; text-decoration: underline;">Course Website</a></p>
     </footer>
 
-/* java script */
     <script src="quiz.js"></script>
 </body>
 </html>
