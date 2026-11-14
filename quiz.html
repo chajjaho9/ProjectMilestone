@@ -8,13 +8,13 @@
 </head>
 <body>
 
-    <!-- Consistent Header Section -->
+/* header */
     <header>
         <h1 id="site-title">HTTP Self-Assessment Quiz</h1>
         <p>Test your understanding of Web Evolution and HTTP Architecture</p>
     </header>
 
-    <!-- Consistent Main Navigation Bar -->
+/* main navigation */
     <nav id="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="topic1.html" class="nav-link">Foundational Architecture</a>
@@ -26,33 +26,31 @@
     </nav>
 
     <div class="container">
-        <!-- Timer & Instructions Bar -->
+/* timer */
         <div class="quiz-timer-bar">
             <span>10 Questions | Passing Score: 70% (7/10)</span>
             <span>Time Remaining: <span id="timer-display">10:00</span></span>
         </div>
 
-        <!-- Results Summary Box (Populated dynamically via JavaScript on submit) -->
+/* results summary box */
         <div id="quiz-results"></div>
 
-        <!-- Client-side Quiz Form -->
+/* quiz form */
         <form id="http-quiz-form">
 
-            <!-- Question 1: Fill-in-the-blank (Textbox) -->
+/* questions */
             <div class="question-card" id="q1-card">
                 <p class="question-title">1. (Fill in the blank) What does the acronym <strong>HTTP</strong> stand for?</p>
                 <input type="text" id="q1" name="q1" class="quiz-text-input" placeholder="Enter full expansion...">
                 <div class="question-feedback" id="q1-feedback"></div>
             </div>
 
-            <!-- Question 2: Fill-in-the-blank (Textbox) -->
             <div class="question-card" id="q2-card">
                 <p class="question-title">2. (Fill in the blank) Which transport protocol replaced TCP in <strong>HTTP/3</strong> to eliminate head-of-line blocking? (3-letter acronym)</p>
                 <input type="text" id="q2" name="q2" class="quiz-text-input" placeholder="e.g., TCP">
                 <div class="question-feedback" id="q2-feedback"></div>
             </div>
 
-            <!-- Question 3: Multiple Choice - Single Selection (Radio Buttons) -->
             <div class="question-card" id="q3-card">
                 <p class="question-title">3. Which HTTP version was known as the "one-line protocol" and only supported the GET method?</p>
                 <label class="option-label"><input type="radio" name="q3" value="HTTP/0.9"> HTTP/0.9 (1991)</label>
@@ -62,7 +60,6 @@
                 <div class="question-feedback" id="q3-feedback"></div>
             </div>
 
-            <!-- Question 4: Multiple Choice - Single Selection (Radio Buttons) -->
             <div class="question-card" id="q4-card">
                 <p class="question-title">4. What does it mean that HTTP is a "stateless" protocol?</p>
                 <label class="option-label"><input type="radio" name="q4" value="no-memory"> Each request is independent and servers retain zero memory of prior requests.</label>
@@ -72,7 +69,6 @@
                 <div class="question-feedback" id="q4-feedback"></div>
             </div>
 
-            <!-- Question 5: Multiple Choice - Single Selection (Radio Buttons) -->
             <div class="question-card" id="q5-card">
                 <p class="question-title">5. Which HTTP status code range indicates a <strong>Client Error</strong> (such as 404 Not Found)?</p>
                 <label class="option-label"><input type="radio" name="q5" value="2xx"> 2xx</label>
@@ -82,7 +78,6 @@
                 <div class="question-feedback" id="q5-feedback"></div>
             </div>
 
-            <!-- Question 6: Multiple Choice - Single Selection (Radio Buttons) -->
             <div class="question-card" id="q6-card">
                 <p class="question-title">6. What key feature introduced in HTTP/2 allows multiple requests and responses to be sent concurrently over a single TCP connection?</p>
                 <label class="option-label"><input type="radio" name="q6" value="multiplexing"> Request Multiplexing & Binary Framing</label>
@@ -92,7 +87,6 @@
                 <div class="question-feedback" id="q6-feedback"></div>
             </div>
 
-            <!-- Question 7: Multiple Choice - Single Selection (Radio Buttons) -->
             <div class="question-card" id="q7-card">
                 <p class="question-title">7. Which protocol wraps HTTP traffic in encryption to form HTTPS?</p>
                 <label class="option-label"><input type="radio" name="q7" value="TLS"> Transport Layer Security (TLS)</label>
@@ -102,7 +96,6 @@
                 <div class="question-feedback" id="q7-feedback"></div>
             </div>
 
-            <!-- Question 8: Multiple Choice - Single Selection (Radio Buttons) -->
             <div class="question-card" id="q8-card">
                 <p class="question-title">8. In the HTTP client-server model, which entity initiates communication by sending a request?</p>
                 <label class="option-label"><input type="radio" name="q8" value="user-agent"> The User Agent (Client)</label>
@@ -112,7 +105,6 @@
                 <div class="question-feedback" id="q8-feedback"></div>
             </div>
 
-            <!-- Question 9: Multi-Selection (Checkboxes - More than one correct choice) -->
             <div class="question-card" id="q9-card">
                 <p class="question-title">9. (Select ALL that apply) Which of the following mechanisms are used to manage state across stateless HTTP requests?</p>
                 <label class="option-label"><input type="checkbox" name="q9" value="cookies"> Browser Cookies</label>
@@ -122,7 +114,6 @@
                 <div class="question-feedback" id="q9-feedback"></div>
             </div>
 
-            <!-- Question 10: Multi-Selection (Checkboxes - More than one correct choice) -->
             <div class="question-card" id="q10-card">
                 <p class="question-title">10. (Select ALL that apply) Which features were formally introduced in <strong>HTTP/1.1 (1997)</strong>?</p>
                 <label class="option-label"><input type="checkbox" name="q10" value="keep-alive"> Persistent Keep-Alive Connections</label>
@@ -132,7 +123,7 @@
                 <div class="question-feedback" id="q10-feedback"></div>
             </div>
 
-            <!-- Action Buttons (Normal buttons handled via JavaScript event listeners) -->
+/* action buttons */
             <div class="quiz-actions">
                 <button type="button" id="submit-quiz-btn" class="btn btn-primary">Submit Quiz</button>
                 <button type="button" id="reset-quiz-btn" class="btn btn-secondary">Reset / Retake Quiz</button>
@@ -141,12 +132,12 @@
         </form>
     </div>
 
-    <!-- Consistent Footer Section -->
+/* footer */
     <footer>
         <p>IT 3203 Class Project | <a href="https://ksuweb.github.io/IT3203/" target="_blank" style="color: #64b5f6; text-decoration: underline;">Course Website</a></p>
     </footer>
 
-    <!-- External JavaScript file for quiz logic -->
+/* java script */
     <script src="quiz.js"></script>
 </body>
 </html>
